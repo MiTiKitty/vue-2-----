@@ -1,7 +1,7 @@
 <template>
     <div class="header-box">
         <!-- 头部-顶部链接展示区 -->
-        <div class="header-top">
+        <div class="header-top main-backgroud-color">
             <div class="main-content">
                 <el-row :gutter="0">
                     <el-col :span="6">
@@ -108,7 +108,6 @@ export default {
     display: flex;
     flex-direction: column;
     min-height: 40px;
-    background-color: #e9e2e2;
     line-height: 40px;
     font-size: 12px;
 }

@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <MyHeader/>
+    App.....
+    <Footer/>
   </div>
 </template>
 
 <script>
 import MyHeader from '@/components/MyHeader'
+import Footer from '@/components/Footer'
 
 export default {
   name: 'App',
   components: {
-    MyHeader
+    MyHeader,
+    Footer
   }
 }
 </script>
@@ -34,5 +38,13 @@ li {
 a {
   color: black;
   text-decoration: none;
+}
+
+.main-backgroud-color {
+  background-color: #e9e2e2;
+}
+
+a:hover {
+  color: #f21515;
 }
 </style>

@@ -17,3 +17,6 @@
 ## Header组件
 1. 完成静态页面的开发
 > 使用 `npm i element-ui -S` 命令安装element-ui
+
+## Footer组件
+1. 完成静态页面的开发

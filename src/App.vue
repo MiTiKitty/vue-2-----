@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <MyHeader/>
-    App.....
-    <Footer/>
+    <router-view></router-view>
+    <!-- 在home或者search，footer是显示的，在登录与注册是隐藏的 -->
+    <Footer v-show="$route.meta.showFooter"/>
   </div>
 </template>
 

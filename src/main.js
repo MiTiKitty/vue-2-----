@@ -168,6 +168,9 @@ Vue.prototype.$prompt = MessageBox.prompt;
 Vue.prototype.$notify = Notification;
 Vue.prototype.$message = Message;
 
+import router from '@/router'
+
 new Vue({
     render: h => h(App),
+    router
 }).$mount('#app')

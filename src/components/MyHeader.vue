@@ -9,10 +9,10 @@
                             <ul>
                                 <li>S-P-H欢迎您!</li> |
                                 <li>请
-                                    <a href="#">登录</a>
+                                    <router-link to="/login">登录</router-link>
                                 </li> |
                                 <li>
-                                    <a href="#">免费注册</a>
+                                    <router-link to="/register">免费注册</router-link>
                                 </li>
                             </ul>
                         </div>
@@ -28,7 +28,7 @@
                                 </li> |
                                 <li>
                                     <a href="#">我的SPH</a>
-                                </li>
+                                </li> |
                                 <li>
                                     <a href="#">SPH会员</a>
                                 </li> |
@@ -58,17 +58,17 @@
                 <el-row :gutter="0">
                     <el-col :span="4">
                         <div class="header-left">
-                            <a href="#">
+                            <router-link to="/home">
                                 <img class="logo-img" src="sph-logo.png" alt="加载图片失败">
-                            </a>
+                            </router-link>
                         </div>
                     </el-col>
                     <el-col :span="20">
                         <div class="header-right">
                             <div class="search-box">
                                 <el-input class="search-input" placeholder="请输入内容" prefix-icon="el-icon-search" v-model="searchContent">
-                            </el-input>
-                            <el-button class="search-btn" type="success">搜索</el-button>
+                                </el-input>
+                                <el-button class="search-btn" type="success" @click="toSearch">搜索</el-button>
                             </div>
                         </div>
                     </el-col>
@@ -93,7 +93,14 @@ export default {
     },
 
     methods: {
-
+        toSearch() {
+            this.$router.push({
+                path: '/search/',
+                query: {
+                    searchContent: this.searchContent
+                }
+            })
+        }
     },
 };
 </script>

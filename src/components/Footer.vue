@@ -69,7 +69,7 @@
                                 <h4>帮助中心</h4>
                             </li>
                             <li>
-                                <img class="footer-img" src="cat_wx.png" alt="图片加载失败">
+                                <img class="footer-img" src="../assets/cat_wx.png" alt="图片加载失败">
                             </li>
                         </ul>
                     </el-col>

@@ -168,6 +168,10 @@ Vue.prototype.$prompt = MessageBox.prompt;
 Vue.prototype.$notify = Notification;
 Vue.prototype.$message = Message;
 
+import TypeNav from '@/components/TypeNav'
+
+Vue.component(TypeNav.name, TypeNav);
+
 import router from '@/router'
 
 new Vue({

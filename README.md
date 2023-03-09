@@ -24,6 +24,20 @@
 1. 完成静态页面的开发
 2. 不在登录和注册页面出现
 
+### Home模块组件的拆分
+1. 三级联动组件ListContainer & 今日推荐组件Recommend & 今日排行Rank组件 & 猜你喜欢Like组件 & 楼层Floor组件 & 品牌Brand组件
+2. 完成ListContainer组件的静态页面开发
+3. 完成Recommend组件的静态页面开发
+4. 完成Rank组件的静态页面开发
+5. 完成Like组件的静态页面开发
+6. 完成Floor组件的静态页面开发
+6. 完成Brand组件的静态页面开发
+
+#### TypeNav组件 : 三级联动组件
+1. 在Home、Search、Detail组件中都存在
+2. 完成静态页面的开发
+3. 注册为全局组件
+
 ## 路由组件的搭建
 ### 配置路由
 1. 使用`npm install vue-router@3.5.2 --save` 命令安装vue-router
@@ -33,4 +47,4 @@
 > 注意，对象写法中，params只能配合name属性使用，配合path属性使用无效，params需要在router.js中占位(:值)
 5. 解决编程式导航多次跳转同一个路由报错的问题，
 > (在编程式导航中传递成功和失败的回调函数) (治标不治本)
->> ()
+

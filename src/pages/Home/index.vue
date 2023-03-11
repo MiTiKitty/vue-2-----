@@ -12,15 +12,17 @@
 </template>
 
 <script>
-import ListContainer from '@/components/ListContainer';
-import Recommend from '@/components/Recommend';
-import Rank from '@/components/Rank';
-import Like from '@/components/Like';
-import Floor from '@/components/Floor';
-import Brand from '@/components/Brand';
+import ListContainer from '@/components/ListContainer.vue';
+import Recommend from '@/components/Recommend.vue';
+import Rank from '@/components/Rank.vue';
+import Like from '@/components/Like.vue';
+import Floor from '@/components/Floor.vue';
+import Brand from '@/components/Brand.vue';
+import TypeNav from '@/components/TypeNav.vue';
+import { reqCategoryList } from '@/api/index';
 
 export default {
-    name: 'SphIndex',
+    name: 'Home',
 
     data() {
         return {
@@ -29,7 +31,7 @@ export default {
     },
 
     mounted() {
-        
+        reqCategoryList()
     },
 
     methods: {
@@ -42,7 +44,8 @@ export default {
         Rank,
         Like,
         Floor,
-        Brand
+        Brand,
+        TypeNav
     }
 };
 </script>

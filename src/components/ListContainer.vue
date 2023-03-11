@@ -77,21 +77,21 @@ export default {
 
     mounted() {
         //this.runInv();
-        this.initTitles(5);
-        this.initItems(16);
+        this.initTitles();
+        this.initItems();
     },
 
     methods: {
-        initTitles(n){
-            for (let i = 1; i < n; i++) {
+        initTitles(){
+            for (let i = 1; i < 5; i++) {
                 const item = this.titles[i - 1]
                 item.id = item.id + 1
                 this.titles.push(item)
             }
         },
 
-        initItems(n){
-            for (let i = 1; i < n; i++) {
+        initItems(){
+            for (let i = 1; i < 16; i++) {
                 const item = this.items[i - 1]
                 item.id = item.id + 1
                 this.items.push(item)

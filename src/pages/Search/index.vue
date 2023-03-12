@@ -1,6 +1,6 @@
 <template>
     <div>
-        SearchContent = {{$route.query.searchContent}}
+        <TypeNav></TypeNav>
     </div>
 </template>
 
@@ -21,6 +21,10 @@ export default {
     methods: {
         
     },
+
+    components: {
+        
+    }
 };
 </script>
 

@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <MyHeader/>
+    <MyHeader />
     <router-view></router-view>
     <!-- 在home或者search，footer是显示的，在登录与注册是隐藏的 -->
-    <Footer v-show="$route.meta.showFooter"/>
+    <Footer v-show="$route.meta.showFooter" />
   </div>
 </template>
 
@@ -16,7 +16,11 @@ export default {
   components: {
     MyHeader,
     Footer
-  }
+  },
+  mounted() {
+    // 通知vuex发送请求，获取数据，存储于仓库当中
+    this.$store.dispatch('categoryList')
+  },
 }
 </script>
 
@@ -33,7 +37,7 @@ export default {
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {

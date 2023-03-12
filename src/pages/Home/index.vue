@@ -18,7 +18,6 @@ import Rank from '@/components/Rank.vue';
 import Like from '@/components/Like.vue';
 import Floor from '@/components/Floor.vue';
 import Brand from '@/components/Brand.vue';
-import TypeNav from '@/components/TypeNav.vue';
 import { reqCategoryList } from '@/api/index';
 
 export default {
@@ -44,8 +43,7 @@ export default {
         Rank,
         Like,
         Floor,
-        Brand,
-        TypeNav
+        Brand
     }
 };
 </script>

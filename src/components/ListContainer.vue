@@ -3,7 +3,7 @@
         <div class="list-left">
             <div class="banner">
                 <div class="item">
-                    <img :src="dataList[currentIndex]">
+                    <img style="width: 1033px;height: 385px;" :src="dataList[currentIndex]">
                 </div>
                 <div class="page" v-if="this.dataList.length > 1">
                     <ul>
@@ -50,24 +50,26 @@
 </template>
 
 <script>
+import { reqBannerList } from '@/api';
+
 export default {
     name: 'ListContainer',
 
     data() {
         return {
-            dataList: ["https://i1.mifile.cn/a4/xmad_15535933141925_ulkYv.jpg", "https://i1.mifile.cn/a4/xmad_15532384207972_iJXSx.jpg", "https://i1.mifile.cn/a4/xmad_15517939170939_oiXCK.jpg"],
+            dataList: [],
             currentIndex: 0,   //默认显示图片
             timer: null,    //定时器
             titles: [
                 {
-                    id: 1,
+                    id: 111,
                     type: '特惠',
                     content: '一二三四五 上山打老虎'
                 }
             ],
             items: [
                 {
-                    id: 1,
+                    id: 1111,
                     icon: '',
                     desc: '话费'
                 }
@@ -76,12 +78,18 @@ export default {
     },
 
     mounted() {
-        //this.runInv();
+        this.initDataList()
+        this.runInv();
         this.initTitles();
         this.initItems();
     },
 
     methods: {
+        async initDataList() {
+            const data = await reqBannerList()
+            console.log(data);
+            this.dataList = data.bannerList
+        },
         initTitles(){
             for (let i = 1; i < 5; i++) {
                 const item = this.titles[i - 1]

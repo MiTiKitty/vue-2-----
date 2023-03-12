@@ -95,9 +95,9 @@ export default {
     methods: {
         toSearch() {
             this.$router.push({
-                path: '/search/',
-                query: {
-                    searchContent: this.searchContent
+                name: 'search',
+                params: {
+                    'keyword': this.searchContent
                 }
             })
         }

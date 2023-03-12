@@ -1,5 +1,6 @@
 // 当前模块，进行api接口的统一管理
 import requests from "./request";
+import mockRequests from "./mockRequest";
 
 /**
  * 3级联动接口
@@ -15,3 +16,14 @@ export const reqCategoryList = () => {
         method: 'get'
     })
 };
+
+/**
+ * mock/banner/list
+ * @returns 图片列表
+ */
+export const reqBannerList = () => {
+    return mockRequests({
+        url: '/banner/list',
+        method: 'get'
+    })
+}
